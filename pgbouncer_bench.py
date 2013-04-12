@@ -4,6 +4,11 @@ import psycopg2
 
 DBNAME = 'postgres'
 DBUSER = 'postgres'
+
+# Set DBHOST = None to use the linux socket
+# Note: psycopg2 will honor any libpq environment variables
+# in your environment, so make sure you don't have any set 
+# if you want to use the unix socket
 DBHOST = None
 #DBHOST = 'localhost'
 DBPORT = 6432
